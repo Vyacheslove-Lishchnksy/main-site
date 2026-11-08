@@ -39,8 +39,11 @@ src/
 ## Деплой на GitHub Pages
 
 1. Залий репозиторій на GitHub (гілка `main`).
-2. Settings → Pages → Build and deployment → Source: **GitHub Actions**.
-3. Пуш у `main` запускає `.github/workflows/deploy.yml` — сайт збереться і
+2. У **Settings → Pages → Build and deployment** вибери Source: **GitHub Actions**.
+   Без цього `actions/deploy-pages` завершується з помилкою 404.
+3. У **Settings → Actions → General** для Workflow permissions дозволь
+   **Read and write permissions**, якщо це потрібно політикою репозиторію.
+4. Пуш у `main` запускає `.github/workflows/deploy.yml` — сайт збереться і
    опублікується автоматично.
 
 `vite.config.ts` використовує `base: './'`, тому збірка працює і в підкаталозі
