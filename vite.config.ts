@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [react()],
   // Відносні шляхи, щоб збірка працювала і на GitHub Pages (підкаталог),
   // і на власному домені без зміни конфігурації.
-  base: './',
+  base: '/main-site/',
 })
